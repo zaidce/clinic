@@ -1,5 +1,7 @@
 from django.db import models
 from datetime import datetime
+
+from service.models import Service
 # Create your models here.
 class Offer(models.Model):
     service_id=models.ForeignKey(Service,related_name="OfferService",on_delete=models.CASCADE)

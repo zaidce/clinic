@@ -4,6 +4,6 @@ from django.contrib import admin
 from . import models
 # Register your models here.
 class SessionDrugDisplay(admin.ModelAdmin):
-         list_display = ('id', 'session_id__name', 'drug_id' ) # Add desired fields here
-         search_fields = ['session_id__name', 'drug_id' ]
-admin.site.register(models.SessionDrug,SessionDrugDisplay)
+         list_display = ('id', 'session_id', 'drug_id' ) # Add desired fields here
+         search_fields = ['session_id', 'drug_id' ]
+admin.site.register(models.SessionDrug,SessionDrugDisplay) 

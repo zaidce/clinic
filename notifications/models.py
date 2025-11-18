@@ -1,5 +1,7 @@
 from django.db import models
 from datetime import datetime
+
+from staff.models import Staff
 # Create your models here.
 class Notification (models.Model):
     staff_id=models.ForeignKey(Staff,related_name="NotificationStaff",on_delete=models.CASCADE)

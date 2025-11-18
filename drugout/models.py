@@ -2,6 +2,8 @@ from django.db import models
 from datetime import datetime
 
 from drugin.models import Drugin
+from sessionx.models import Sessionx
+from staff.models import Staff
 # Create your models here.
 class Drugout(models.Model):
     drugin_id=models.ForeignKey(Drugin,related_name="DrugoutDrugin",on_delete=models.CASCADE)

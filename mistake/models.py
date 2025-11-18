@@ -1,5 +1,7 @@
 from django.db import models
 from datetime import datetime
+
+from staff.models import Staff
 class Mistake(models.Model):
     staff_id=models.ForeignKey(Staff,related_name="MistakeStaff",on_delete=models.CASCADE)
     func=models.CharField(max_length=200,blank=True,null=True)
@@ -7,4 +9,4 @@ class Mistake(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     def __str__(self):
-        return self.func
+        return self.staff_id.name

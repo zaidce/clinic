@@ -3,6 +3,7 @@ from datetime import datetime
 
 from client.models import Client
 from service.models import Service
+from staff.models import Staff
 # Create your models here.
 class Sessionx(models.Model):
     choices={
