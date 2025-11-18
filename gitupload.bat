@@ -1,6 +1,5 @@
 @echo off
 echo "# vac" >> README.md
-echo "ddddddd"
 git init
 git add .
 git status
