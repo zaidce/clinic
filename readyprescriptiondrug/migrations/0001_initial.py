@@ -20,8 +20,8 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
-                ('drug_id', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='ReadyPrescriptionDrugDrug', to='drug.drug')),
-                ('readyPrescription_id', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='ReadyPrescriptionDrugReadyPrescription', to='readyprescription.readyprescription')),
+                ('drug_id', models.ForeignKey(  on_delete=django.db.models.deletion.CASCADE, related_name='ReadyPrescriptionDrugDrug', to='drug.drug')),
+                ('readyPrescription_id', models.ForeignKey(  on_delete=django.db.models.deletion.CASCADE, related_name='ReadyPrescriptionDrugReadyPrescription', to='readyprescription.readyprescription')),
             ],
         ),
     ]

@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
                 ('nextSessionDate', models.DateField(default=datetime.datetime.now)),
                 ('nextSessionNote', models.CharField(blank=True, max_length=200, null=True)),
                 ('deleteRequest', models.BooleanField(default=False)),
-                ('deleteNote', models.CharField(blank=True, max_length=200, null=True)),
+                ('deleteNote', models.CharField(  max_length=200 )),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
                 ('client_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='SessionxClient', to='client.client')),

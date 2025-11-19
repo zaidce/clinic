@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             name='Staff',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(blank=True, max_length=200, null=True)),
+                ('name', models.CharField( max_length=200 )),
                 ('job', models.CharField(blank=True, max_length=200, null=True)),
                 ('address', models.CharField(blank=True, max_length=200, null=True)),
                 ('phonespecialize', models.CharField(blank=True, max_length=200, null=True)),
