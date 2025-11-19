@@ -6,6 +6,9 @@ from django.contrib import admin
 from . import models
 # Register your models here.
 class DebtorDisplay(admin.ModelAdmin):
-         list_display = ('id', 'client_id__name', 'total', 'DebtorDate' ) # Add desired fields here
+         list_display = ('id', 'xxx', 'total', 'DebtorDate','note' ) # Add desired fields here
          search_fields = ['client_id__name', 'total', 'DebtorDate']
-admin.site.register(models.Debtor,DebtorDisplay)
+         @admin.display(description="الزبون") # Set the column header here
+         def xxx(self, obj):
+                return obj.client_id.name
+admin.site.register(models.Debtor,DebtorDisplay) 

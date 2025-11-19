@@ -23,7 +23,8 @@ class Migration(migrations.Migration):
                 ('DebtorDate', models.DateTimeField(default=datetime.datetime.now)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
-                ('client_id', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='Debtor', to='client.client')),
+                ('client_id', models.ForeignKey( on_delete=django.db.models.deletion.CASCADE, related_name='Debtor', to='client.client')),
             ],
         ),
     ]
+#blank=True, null=True,
